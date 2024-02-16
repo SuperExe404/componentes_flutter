@@ -10,32 +10,31 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Componentes de flutter'),
       ),
       body: ListView(
-        children: const[
-          Text('Hola Mundo'),
+        children:[
+          const Text('Hola Mundo'),
           ListTile(
-            leading: Icon(Icons.accessible_rounded),
+            leading: const Icon(Icons.accessible_rounded),
             title: Text('Hola Mundo',
-            style: TextStyle(color: Colors.red),),
-            subtitle: Text('11-02-2024 / LAs vegas '),
-            trailing: Icon(Icons.account_circle_outlined),
+              style: Theme.of(context).textTheme.headlineLarge,
+            ),
+            subtitle: const Text('11-02-2024 / Las vegas '),
+            trailing: const Icon(Icons.account_circle_outlined),
           ),
-          Divider(),
-          ListTile(
+          const Divider(),
+          const ListTile(
             leading: Icon(Icons.access_time_outlined),
-            title: Text('Hola Mundo',
-            style: TextStyle(color: Colors.green),),
-            subtitle: Text('11-02-2024 / LAs vegas '),
+            title: Text('Hola Mundo'),
+            subtitle: Text('11-02-2024 / Las vegas '),
             trailing: Icon(Icons.grade_outlined),
           ),
-          Divider(),
-          ListTile(
+          const Divider(),
+          const ListTile(
             leading: Icon(Icons.ad_units_sharp),
-            title: Text('Hola Mundo',
-            style: TextStyle(color: Colors.blue),),
-            subtitle: Text('11-02-2024 / LAs vegas '),
+            title: Text('Hola Mundo',),
+            subtitle: Text('11-02-2024 / Las vegas '),
             trailing: Icon(Icons.screen_lock_portrait_sharp),
           ),
-          Divider(),
+          const Divider(),
         ],
       ),
     );
