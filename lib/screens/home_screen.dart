@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,8 +17,12 @@ class HomeScreen extends StatelessWidget {
             title: Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: const Text('11-02-2024 / Las vegas '),
-            trailing: const Icon(Icons.account_circle_outlined),
+            subtitle: Text('11-02-2024 / Las vegas ',
+              style: AppTheme.lightTheme.textTheme.bodySmall
+            ),
+            trailing: const Icon(Icons.account_circle_outlined,
+              color: AppTheme.chemaColor
+            ),
           ),
           const Divider(),
           ListTile(
@@ -25,8 +30,12 @@ class HomeScreen extends StatelessWidget {
             title: Text('ListViwe.builder',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: const Text('Scroll infinito '),
-            trailing: const Icon(Icons.account_circle_outlined),
+            subtitle: Text('Scroll infinito ',
+              style: AppTheme.lightTheme.textTheme.bodySmall
+            ),
+            trailing: const Icon(Icons.account_circle_outlined,
+              color: AppTheme.chemaColor
+            ),
           ),
           const Divider(),
           ListTile(
@@ -34,8 +43,12 @@ class HomeScreen extends StatelessWidget {
             title: Text('Notificaciones',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: const Text('Creacion de notificaciones '),
-            trailing: const Icon(Icons.account_circle_outlined),
+            subtitle: Text('Creacion de notificaciones ',
+              style: AppTheme.lightTheme.textTheme.bodySmall
+            ),
+            trailing: const Icon(Icons.account_circle_outlined,
+              color: AppTheme.chemaColor
+            ),
           ),
           const Divider(),
         ],
