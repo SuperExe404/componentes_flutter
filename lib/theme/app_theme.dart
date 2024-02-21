@@ -11,19 +11,18 @@ class AppTheme{
   // Declaracion del tema claro
   static final ThemeData lightTheme = ThemeData.light().copyWith(
      scaffoldBackgroundColor: backColor,
-      appBarTheme:  const AppBarTheme(color: mainColor),
+      appBarTheme:  const AppBarTheme(color: backColor),
       textTheme: TextTheme(
         headlineLarge: GoogleFonts.montserrat(
-          color: const Color.fromARGB(0, 0, 0, 0),
+          color: chemaColor,
           fontSize: 20.6,
           fontWeight: FontWeight.bold,
-          decoration: TextDecoration.underline,
-          decorationColor: mainColor,
+          decorationColor: chemaColor,
           decorationThickness: 3.0,
           fontStyle: FontStyle.italic,
         ),
         bodySmall: GoogleFonts.acme(
-          color: superColor,
+          color: chemaColor,
           fontSize: 15,
         ),
       ),

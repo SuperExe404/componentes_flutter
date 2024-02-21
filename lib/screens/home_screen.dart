@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/infinite_list_screen.dart';
+import 'package:flutter_application_3/screens/inputs_screens.dart';
+import 'package:flutter_application_3/screens/notification_screen.dart';
 import 'package:flutter_application_3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +16,9 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children:[
           ListTile(
-            leading: const Icon(Icons.accessible_rounded),
+            leading: const Icon(Icons.accessible_rounded,
+              color: AppTheme.chemaColor
+            ),
             title: Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
@@ -23,10 +28,18 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.account_circle_outlined,
               color: AppTheme.chemaColor
             ),
+            onTap: () {
+              final ruta1 = MaterialPageRoute(builder: (context){
+                return const InputScreen();
+              });
+              Navigator.push(context, ruta1);
+            },
           ),
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.accessible_rounded),
+            leading: const Icon(Icons.accessible_rounded,
+              color: AppTheme.chemaColor
+            ),
             title: Text('ListViwe.builder',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
@@ -36,10 +49,18 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.account_circle_outlined,
               color: AppTheme.chemaColor
             ),
+            onTap: () {
+              final ruta2 = MaterialPageRoute(builder: (context){
+                return const InfiniteListScreen();
+              });
+              Navigator.push(context, ruta2);
+            },
           ),
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.accessible_rounded),
+            leading: const Icon(Icons.accessible_rounded,
+              color: AppTheme.chemaColor
+            ),
             title: Text('Notificaciones',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
@@ -49,6 +70,12 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.account_circle_outlined,
               color: AppTheme.chemaColor
             ),
+            onTap: () {
+              final ruta3 = MaterialPageRoute(builder: (context){
+                return const NotificationScreen();
+              });
+              Navigator.push(context, ruta3);
+            },
           ),
           const Divider(),
         ],
