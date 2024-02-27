@@ -16,8 +16,10 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children:[
           ListTile(
-            leading: const Icon(Icons.accessible_rounded,
-              color: AppTheme.chemaColor
+           leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.account_circle
+              ),
             ),
             title: Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
@@ -37,8 +39,10 @@ class HomeScreen extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.accessible_rounded,
-              color: AppTheme.chemaColor
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.account_circle
+              ),
             ),
             title: Text('ListViwe.builder',
               style: Theme.of(context).textTheme.headlineLarge,
@@ -58,8 +62,10 @@ class HomeScreen extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.accessible_rounded,
-              color: AppTheme.chemaColor
+           leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.account_circle
+              ),
             ),
             title: Text('Notificaciones',
               style: Theme.of(context).textTheme.headlineLarge,
