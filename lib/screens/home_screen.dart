@@ -27,12 +27,19 @@ class HomeScreen extends StatelessWidget {
             subtitle: Text('11-02-2024 / Las vegas ',
               style: AppTheme.lightTheme.textTheme.bodySmall
             ),
+            // OPCIONES DE CIRCULARPROGRESSIONDICATOR
+            // trailing: const CircularProgressIndicator(
+            //   strokeWidth: 25.0,
+            //   value: 0.46,
+            //   color: Color.fromARGB(255, 0, 0, 0),
+            //   backgroundColor: color.fromA
+            // ),
             trailing: const Icon(Icons.account_circle_outlined,
               color: AppTheme.chemaColor
             ),
             onTap: () {
               final ruta1 = MaterialPageRoute(builder: (context){
-                return const InputScreen();
+                return const InputsScreen();
               });
               Navigator.push(context, ruta1);
             },
